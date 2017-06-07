@@ -1,0 +1,62 @@
+#include<stdio.h>
+int s1[3],s2[3],s3[3],s4[3],a[4],b[4];
+int main()
+{
+	int i,k,flag;
+	k=0;
+	for(i=0;i<4;i++)
+	a[i]=0;
+	for(i=0;i<3;i++)
+	scanf("%d",&s1[i]);
+	scanf("%d",&b[k]);
+	k++;
+	if(s1[0]==1)
+	a[3]=1;
+	if(s1[1]==1)
+	a[2]=1;
+	if(s1[2]==1)
+	a[1]=1;
+	for(i=0;i<3;i++)
+	scanf("%d",&s2[i]);
+	scanf("%d",&b[k]);
+	k++;
+	if(s2[0]==1)
+	a[0]=1;
+	if(s2[1]==1)
+	a[3]=1;
+	if(s2[2]==1)
+	a[2]=1;
+	for(i=0;i<3;i++)
+	scanf("%d",&s3[i]);
+	scanf("%d",&b[k]);
+	k++;
+	if(s3[0]==1)
+	a[1]=1;
+	if(s3[1]==1)
+	a[0]=1;
+	if(s3[2]==1)
+	a[3]=1;
+	for(i=0;i<3;i++)
+	scanf("%d",&s4[i]);
+	scanf("%d",&b[k]);
+	if(s4[0]==1)
+	a[2]=1;
+	if(s4[1]==1)
+	a[1]=1;
+	if(s4[2]==1)
+	a[0]=1;
+	flag=0;
+	for(i=0;i<4;i++)
+	{
+		if((a[i]==1)&&(b[i]==1))
+		{
+			flag=1;
+			break;
+		}
+	}
+	if(flag==1)
+	printf("YES\n");
+	else
+	printf("NO\n");					
+	return 0;
+}
